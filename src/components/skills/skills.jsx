@@ -26,11 +26,11 @@ export default function Skills() {
   const other = [];
 
   return (
-    <div className="flex flex-col text-center justify-evenly align-middle h-[100vh]">
+    <div className="flex flex-col gap-10 text-center justify-evenly align-middle min-h-[100vh]">
       <h1 className="font-bold text-5xl text-light-pink">
         SKILLS & TECHNOLOGIES
       </h1>
-      <div className="flex flex-row shrink align-middle items-center mx-36 gap-5 justify-around">
+      <div className="flex flex-row align-middle items-center mx-36 gap-5 justify-around">
         <Category name="Front-end" image={frontend_icon} skills={frontend} />
         <Category name="Back-end" image={backend_icon} skills={backend} />
         <Category name="Design" image={other_icon} skills={backend} />
