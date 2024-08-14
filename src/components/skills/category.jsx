@@ -6,6 +6,7 @@ export const Category = ({ skills, name, image }) => {
   const categoryRef = useRef(null);
   const skillsRef = useRef(null);
   const [open, setOpen] = useState(false);
+  const windowWidth = window.innerWidth;
 
   useEffect(() => {
     const categoryElement = categoryRef.current;
@@ -25,9 +26,9 @@ export const Category = ({ skills, name, image }) => {
         skillsElement,
         { width: 0 },
         {
-          width: 500,
           display: "flex",
           opacity: 1,
+          width: windowWidth > 900 ? 500 : 300,
           duration: 0.2,
         }
       );
@@ -37,7 +38,7 @@ export const Category = ({ skills, name, image }) => {
       setOpen(false);
       gsap.to(skillsElement, {
         width: 0,
-        duration: 0.2,
+        duration: 0.1,
         onComplete: () => {
           gsap.set(skillsElement, { display: "none" });
         },
@@ -56,7 +57,7 @@ export const Category = ({ skills, name, image }) => {
   return (
     <div
       ref={categoryRef}
-      className="flex cursor-pointer flex-row justify-between align-middle z-10 group border-[1px] border-white py-5 px-10 rounded-[40px] h-96 gap-10"
+      className="flex cursor-pointer flex-col lg:flex-row justify-between align-middle z-10 group border-[1px] border-white py-5 px-10 rounded-[40px] lg:h-96 gap-10 hover:scale-105 hover:border-[2px] ease-in-out duration-100 hover:bg-light-pink hover:bg-opacity-10 hover:border-light-pink hover:border-opacity-10"
     >
       <div className="flex gap-12 flex-col justify-center items-center align-middle text-center p-5">
         <img src={image} className="h-52 w-60" alt="" />

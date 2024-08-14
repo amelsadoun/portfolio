@@ -7,14 +7,17 @@ import nodejs_icon from "../svg/nodejs.svg";
 import frontend_icon from "../svg/frontend.svg";
 import backend_icon from "../svg/backend.svg";
 import other_icon from "../svg/other.svg";
+import hackflow_home from "../../assets/preview-images/hackflow/home.png";
+import hackflow_teams from "../../assets/preview-images/hackflow/teams.png";
+
 
 export const projectsArray = [
   {
     name: "FieldOps",
     description:
-      "lorem ipsum sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn lorem ipsum sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn",
+      " lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn lorem ipsum sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn",
     image: fieldOps,
-    previewImages: [],
+    previewImages: [hackflow_home, hackflow_teams],
     github: "https://github.com/066516/micro-hack-2.git",
     technologies: [{ name: "express", icon: express_icon }, {name: "tailwind", icon: tailwind_icon}],
   },

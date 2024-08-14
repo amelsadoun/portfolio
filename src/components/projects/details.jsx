@@ -1,34 +1,41 @@
+import React from "react";
+import { showPopup } from "react-popupify";
 import github_icon from "../svg/github.svg";
 import preview_icon from "../svg/preview.svg";
 import Technologies from "./technologies";
+import PreviewPopup from "./previewPopup";
+import "react-popupify/dist/bundle.css";
 
 export const Details = ({ info }) => {
-
-  const showPreviewImages = () => {};
+  const showPreviewImages = () => {
+    showPopup("previewPopupId", { open: true });
+  };
 
   return (
-    <div className="flex flex-row flex-wrap justify-around gap-10 w-full">
+    <div className="flex flex-col flex-wrap justify-between align-middle items-center gap-6 w-full">
       <Technologies techs={info.technologies} />
-      {info.github && (
-        <a
-          className="flex flex-row justify-between align-middle items-center gap-3 hover:scale-110 ease-in duration-150 font-semibold hover:underline"
-          href={info.github}
-        >
-          <img src={github_icon} className="w-7 h-7 " alt="" />
-          <p>Github repository</p>
-        </a>
-      )}
-      {info.previewImages && (
-        <a
-          className="flex flex-row justify-between align-middle items-center gap-3 hover:scale-110 ease-in duration-150 font-semibold hover:underline"
-          onClick={showPreviewImages}
-        >
-          <img src={preview_icon} className="w-7 h-7 " alt="" />
-          <p>Preview images</p>
-        </a>
-      )}
+      <div className="flex flex-row justify-around w-full">
+        {" "}
+        {info.github && (
+          <a
+            className="flex flex-row justify-between align-middle items-center gap-3 hover:scale-110 ease-in duration-150 font-semibold hover:underline"
+            href={info.github}
+          >
+            <img src={github_icon} className="w-7 h-7 " alt="" />
+            <p>Github repository</p>
+          </a>
+        )}
+        {info.previewImages && info.previewImages.length > 0 && (
+          <div
+            className="cursor-pointer flex flex-row justify-between align-middle items-center gap-3 hover:scale-110 ease-in duration-150 font-semibold hover:underline"
+            onClick={showPreviewImages}
+          >
+            <img src={preview_icon} className="w-7 h-7 " alt="" />
+            <p>Preview images</p>
+          </div>
+        )}
+      </div>
+      <PreviewPopup images={info.previewImages} />
     </div>
   );
 };
-
-

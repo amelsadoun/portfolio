@@ -12,7 +12,7 @@ export default function TypeWriterText() {
   };
 
   return (
-    <h1 className="text-7xl text-white">
+    <h1 className="text-6xl lg:text-7xl text-white">
       I'M AMEL SADOUN
       <br /> A{" "}
       <span className="text-light-pink font-bold">

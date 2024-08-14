@@ -11,6 +11,7 @@ const Project = ({ info }) => {
   const nameRef = useRef(null);
   const infoRef = useRef(null);
   const imageRef = useRef(null);
+  const windowWidth = window.innerWidth;
 
   // Function to center the expanded project category on the screen
   const scrollToCenter = () => {
@@ -26,12 +27,12 @@ const Project = ({ info }) => {
   const handleShowDetails = () => {
     setDetailsShown(true);
     gsap.to(projectRef.current, {
-      width: "100%",
-      height: "500px",
-      duration: 0.3,
+      width: "85%",
+      height: windowWidth > 1000 ? "500px": "800px",
+      duration: 0,
       ease: "power2.out",
       display: "flex",
-      flexDirection: "row",
+      flexDirection: windowWidth > 900 ? "row" : "column",
       border: "1px solid white",
       onComplete: () => scrollToCenter(),
     });
@@ -39,6 +40,7 @@ const Project = ({ info }) => {
       position: "relative",
       display: "flex",
       color: "white",
+      padding: "20 20 0 0",
     });
     gsap.to(imageRef.current, { margin: 30, borderRadius: 10 });
     gsap.to(nameRef.current, { color: "white" });
@@ -59,6 +61,7 @@ const Project = ({ info }) => {
       duration: 0,
       flexDirection: "column",
       border: "none",
+      onComplete: () => scrollToCenter(),
     });
 
     gsap.to(imageRef.current, { margin: 0, borderRadius: 0 });
@@ -103,12 +106,12 @@ const Project = ({ info }) => {
   return (
     <div
       ref={projectRef}
-      className="relative rounded-lg overflow-hidden w-[450px]"
+      className="relative rounded-xl overflow-hidden w-[450px] "
     >
       <img ref={imageRef} src={info.image} className="max-w-full" alt="" />
       <div
         ref={infoRef}
-        className="absolute top-0 w-full h-full backdrop-blur-[7px] flex-col justify-evenly items-center"
+        className="absolute top-0 w-full h-full backdrop-blur-[7px] flex-col justify-evenly items-center self-center align-middle"
         style={{ display: "none", opacity: 0 }}
       >
         <h1 ref={nameRef} className="text-purple font-bold text-4xl">
@@ -116,7 +119,7 @@ const Project = ({ info }) => {
         </h1>
         <p
           ref={descriptionRef}
-          className="text-lg font-medium mx-6 text-left indent-10"
+          className="text-md font-medium mx-6 text-left indent-10"
         >
           {detailsShown
             ? info.description
@@ -127,7 +130,7 @@ const Project = ({ info }) => {
         <button
           ref={buttonRef}
           onClick={detailsShown ? handleHideDetails : handleShowDetails}
-          className="flex flex-row justify-center items-center gap-5 text-center font-medium text-xl border-[1px] w-[90%] py-3 hover:bg-purple hover:border-purple hover:text-white rounded-md"
+          className="flex flex-row justify-center items-center gap-5 text-center font-medium text-xl self-center border-[1px] w-[90%] py-3 hover:bg-purple hover:border-purple hover:text-white rounded-md"
         >
           {detailsShown ? "Hide p" : "P"}roject details{" "}
           <span>{detailsShown ? "←" : "→"}</span>

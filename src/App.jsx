@@ -1,4 +1,5 @@
 import AboutUs from "./components/about/aboutUs";
+import Contact from "./components/contact/contact";
 import Events from "./components/events/events";
 import Hero from "./components/hero/hero";
 import NavigationCarousel from "./components/navigation/navigationCarousel";
@@ -7,7 +8,7 @@ import Skills from "./components/skills/skills";
 
 function App() {
   return (
-    <>
+    <div className="flex flex-col align-middle items-center">
       <NavigationCarousel />
       <section id="who am i?">
         <Hero />
@@ -16,9 +17,12 @@ function App() {
         <Skills />
       </section>
       <section id="projects">
-        <Projects/>
+        <Projects />
       </section>
-    </>
+      <section id="contact">
+        <Contact />
+      </section>
+    </div>
   );
 }
 

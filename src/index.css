@@ -6,3 +6,27 @@
 *{
     font-family: "Raleway";
 }
+
+/* Add this to your main CSS file */
+.custom-carousel .control-arrow {
+    width: 50px; /* Increase the width of the arrow buttons */
+    height: 50px; /* Increase the height of the arrow buttons */
+    align-self: center;
+  }
+  
+  .custom-carousel .control-next.control-arrow:before,
+  .custom-carousel .control-prev.control-arrow:before {
+    border: solid white; /* Change arrow color to white for better contrast */
+    border-width: 0 4px 4px 0; /* Adjust arrow thickness */
+    padding: 10px; /* Increase padding for larger arrows */
+  }
+  
+  .custom-carousel .control-next.control-arrow:before {
+    transform: rotate(-45deg); /* Adjust arrow direction for "next" */
+  }
+  
+  .custom-carousel .control-prev.control-arrow:before {
+    transform: rotate(135deg); /* Adjust arrow direction for "prev" */
+  }
+  
+ 
