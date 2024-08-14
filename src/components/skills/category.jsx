@@ -57,7 +57,7 @@ export const Category = ({ skills, name, image }) => {
   return (
     <div
       ref={categoryRef}
-      className="flex cursor-pointer flex-col lg:flex-row justify-between align-middle z-10 group border-[1px] border-white py-5 px-10 rounded-[40px] lg:h-96 gap-10 hover:scale-105 hover:border-[2px] ease-in-out duration-100 hover:bg-light-pink hover:bg-opacity-10 hover:border-light-pink hover:border-opacity-10"
+      className="flex shadow-xl cursor-pointer flex-col lg:flex-row justify-between align-middle z-10 group border-[1px] border-white py-5 px-10 rounded-[40px] lg:h-96 gap-10 hover:scale-105 hover:border-[2px] ease-in-out duration-100 hover:bg-light-pink hover:bg-opacity-10 hover:border-light-pink hover:border-opacity-10"
     >
       <div className="flex gap-12 flex-col justify-center items-center align-middle text-center p-5">
         <img src={image} className="h-52 w-60" alt="" />

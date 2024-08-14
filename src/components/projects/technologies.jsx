@@ -1,9 +1,12 @@
 const Technologies = ({ techs }) => {
   return (
-    <div className="flex flex-row flex-wrap justify-around w-full text-lg font-semibold text-center">
+    <div className="flex flex-row flex-wrap justify-around w-full font-semibold text-lg text-center">
       {techs.map((tech, index) => (
         <>
-          {index !== 0 && " - "} <p>{tech.name}</p>
+          {index !== 0 && " - "}{" "}
+          <p>
+            {tech.category+": "} <span className="font-normal ml-1">{tech.used}</span>
+          </p>
         </>
       ))}
     </div>

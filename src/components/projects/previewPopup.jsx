@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Popup } from "react-popupify";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
 
 const CustomPopup = ({ images }) => {
+ 
   return (
     <Popup
       popupId="previewPopupId"
@@ -26,7 +27,7 @@ const CustomPopup = ({ images }) => {
         {images.map((image, index) => (
           <div key={index}>
             <img
-              className="max-h-[850px] max-w-[800px] object-contain "
+              className="max-h-[90vh] max-w-[800px] object-contain "
               src={image}
               alt={`Preview ${index + 1}`}
             />

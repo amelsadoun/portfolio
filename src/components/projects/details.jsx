@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { showPopup } from "react-popupify";
-import github_icon from "../svg/github.svg";
-import preview_icon from "../svg/preview.svg";
+import github_icon from "../svg/other/github.svg";
+import preview_icon from "../svg/other/preview.svg";
 import Technologies from "./technologies";
 import PreviewPopup from "./previewPopup";
 import "react-popupify/dist/bundle.css";
 
 export const Details = ({ info }) => {
-  const showPreviewImages = () => {
+  const [previewImages, setPreviewImages] = useState([]);
+
+  const showPreviewImages = (images) => {
+    setPreviewImages(images);  // Update state with the correct images
     showPopup("previewPopupId", { open: true });
   };
-
   return (
     <div className="flex flex-col flex-wrap justify-between align-middle items-center gap-6 w-full">
       <Technologies techs={info.technologies} />
