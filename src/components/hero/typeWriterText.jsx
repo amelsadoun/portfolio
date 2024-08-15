@@ -18,7 +18,7 @@ export default function TypeWriterText() {
       <span className="text-light-pink font-bold">
         {/* Style will be inherited from the parent element */}
         <Typewriter
-          words={["FULL-STACK DEVELOPER", "MOBILE DEVELOPER", "GRAPHIC DESIGNER", "PERSON"]}
+          words={["FRONT-END DEVELOPER", "MOBILE DEVELOPER", "GRAPHIC DESIGNER", "PERSON"]}
           loop={true}
           cursor
           cursorStyle="|"
