@@ -11,7 +11,23 @@ const Project = ({ info }) => {
   const nameRef = useRef(null);
   const infoRef = useRef(null);
   const imageRef = useRef(null);
-  const windowWidth = window.innerWidth;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  //deal with window dimensions changes
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+  
+    window.addEventListener("resize", handleResize);
+  
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  
+
 
   //verify if the project image is dark to make styles coherent
   const darkBackground = info.name === "HackFlow";

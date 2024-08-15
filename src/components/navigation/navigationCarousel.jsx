@@ -45,7 +45,7 @@ export default function NavigationCarousel() {
   return (
     <div
       ref={carouselRef}
-      className={`fixed flex flex-col items-start z-10 h-16 bottom-32 right-6`}
+      className={`fixed lg:flex hidden flex-col items-start z-10 h-16 bottom-32 right-6`}
     >
       {items.map((item, index) => (
         <div

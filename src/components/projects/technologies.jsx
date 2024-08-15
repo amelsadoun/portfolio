@@ -1,6 +1,6 @@
 const Technologies = ({ techs }) => {
   return (
-    <div className="flex flex-row flex-wrap justify-around w-full font-semibold text-lg text-center">
+    <div className="flex flex-row flex-wrap justify-around w-full font-semibold text-md lg:text-lg text-center">
       {techs.map((tech, index) => (
         <>
           {index !== 0 && " - "}{" "}

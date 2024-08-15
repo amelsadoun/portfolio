@@ -24,7 +24,7 @@ export default function Lineshero() {
 
   //ps: It was originally one svg then I decided to double it because it looked better that way
   return (
-    <div className="absolute left-0"> 
+    <div className="hidden lg:block absolute left-0"> 
       <svg
       className="absolute left-0"
         width="30vw"

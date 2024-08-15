@@ -8,12 +8,12 @@ import Skills from "./components/skills/skills";
 
 function App() {
   return (
-    <div className="flex flex-col align-middle items-center">
+    <div className="flex flex-col align-middle lg:items-center w-fit">
       <NavigationCarousel />
       <section id="who am i?">
         <Hero />
       </section>
-      <section id="skills">
+      <section id="skills" className="flex flex-col align-middle items-center">
         <Skills />
       </section>
       <section id="projects">

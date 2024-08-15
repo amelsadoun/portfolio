@@ -8,9 +8,9 @@ export default function Hero() {
     <div className="min-h-[100vh]">
       <Lineshero />
       <Header />
-      <div className="ml-[25vw] mt-[10vh] m-20 flex flex-col justify-between gap-20">
+      <div className="lg:ml-[25vw] mt-[10vh] lg:m-20 m-10 flex flex-col justify-between gap-20">
         <TypeWriterText />
-        <p className="text-4xl text-white font-light mr-10">
+        <p className="text-3xl text-white font-light lg:mr-10">
           I'm a 3rd year computer science student at ESI Algiers, particularly
           interested in developing functioning and optimized web applications
         </p>

@@ -6,8 +6,21 @@ export const Category = ({ skills, name, image }) => {
   const categoryRef = useRef(null);
   const skillsRef = useRef(null);
   const [open, setOpen] = useState(false);
-  const windowWidth = window.innerWidth;
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
+  //deal with window dimensions changes
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+  
+    window.addEventListener("resize", handleResize);
+  
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   useEffect(() => {
     const categoryElement = categoryRef.current;
     const skillsElement = skillsRef.current;
