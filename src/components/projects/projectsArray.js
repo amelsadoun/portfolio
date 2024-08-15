@@ -42,7 +42,7 @@ export const projectsArray = [
   {
     name: "FieldOps",
     description:
-      " lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn lorem ipsum sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn sumn lorem ipsum sumn",
+      "FieldOps is a mobile app for on-field task management, developed during a hackathon. It allows companies to track their workers and enables workers to check their tasks, mark them as complete, and manage their workload. I contributed to the front-end development and designed the logo.",
     image: fieldOps,
     previewImages: [
       fieldOpsLogin,
@@ -60,7 +60,7 @@ export const projectsArray = [
   },
   {
     name: "HackFlow",
-    description: "lorem ipsum sumn",
+    description: "HackFlow is a hackathon management app that supports everything from team building to project submissions. It helps participants stay on track with the event schedule, allows organizers to make announcements, and enables judges to evaluate projects.",
     image: hackflow,
     previewImages: [hackflowHome, hackflowTeams],
     github: "https://github.com/imadfen/GDG_Hack_OR-BIT_Team.git",
@@ -71,7 +71,7 @@ export const projectsArray = [
   },
   {
     name: "SmarToI",
-    description: "lorem ipsum sumn",
+    description: "SmarTOI is a smart switch mobile application that enables users to control their home devices through IoT. I was responsible for the entire mobile app development, as well as the design of the visual identity and logo.",
     image: smartoi,
     previewImages: [
       smartoiPreview1,
@@ -93,6 +93,9 @@ export const projectsArray = [
       smartoiLightSettings,
     ],
     github: "https://github.com/amelsadoun/SmarTOI.git",
-    technologies: [{category: "Front-end", used: "React native"}, {category: "Visual ID", used: "Illustrator"}],
+    technologies: [
+      { category: "Front-end", used: "React native" },
+      { category: "Visual ID", used: "Illustrator" },
+    ],
   },
 ];
