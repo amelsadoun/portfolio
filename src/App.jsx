@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import AboutUs from "./components/about/aboutUs";
 import Contact from "./components/contact/contact";
 import Events from "./components/events/events";
@@ -7,6 +8,9 @@ import Projects from "./components/projects/projects";
 import Skills from "./components/skills/skills";
 
 function App() {
+  useEffect(() => {
+    document.body.style.zoom = "90%";
+  }, []);
   return (
     <div className="flex flex-col align-middle lg:items-center w-fit">
       <NavigationCarousel />
