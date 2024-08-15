@@ -8,11 +8,12 @@ import "react-popupify/dist/bundle.css";
 
 export const Details = ({ info }) => {
   const [previewImages, setPreviewImages] = useState([]);
-
+  const name = info.name;
   const showPreviewImages = (images) => {
-    setPreviewImages(images);  // Update state with the correct images
-    showPopup("previewPopupId", { open: true });
+    setPreviewImages(images); // Update state with the correct images
+    showPopup(name, { open: true });
   };
+
   return (
     <div className="flex flex-col flex-wrap justify-between align-middle items-center gap-6 w-full">
       <Technologies techs={info.technologies} />
@@ -30,14 +31,14 @@ export const Details = ({ info }) => {
         {info.previewImages && info.previewImages.length > 0 && (
           <div
             className="cursor-pointer flex flex-row justify-between align-middle items-center gap-3 hover:scale-110 ease-in duration-150 font-semibold hover:underline"
-            onClick={showPreviewImages}
+            onClick={() => showPreviewImages(info.previewImages)}
           >
             <img src={preview_icon} className="w-7 h-7 " alt="" />
             <p>Preview images</p>
           </div>
         )}
       </div>
-      <PreviewPopup images={info.previewImages} />
+      <PreviewPopup info={info} />
     </div>
   );
 };
