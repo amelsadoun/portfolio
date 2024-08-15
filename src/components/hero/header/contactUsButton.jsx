@@ -2,7 +2,7 @@ export default function ContactUsButton() {
   //I copied this code from the world wide web
     return (
     <a
-      href="#_"
+      href="#contact"
       class="relative items-center justify-start inline-block px-7 py-3 overflow-hidden text-xl rounded-full group"
     >
       <span class="w-48 h-48 translate-x-0 absolute bg-white opacity-[3%]"></span>

@@ -5,7 +5,7 @@ import TypeWriterText from "./typeWriterText";
 
 export default function Hero() {
   return (
-    <div className="min-h-[100vh]">
+    <div className="min-h-[110vh]">
       <Lineshero />
       <Header />
       <div className="lg:ml-[25vw] mt-[10vh] lg:m-20 m-10 flex flex-col justify-between gap-20">
