@@ -37,6 +37,7 @@ import smartoiLightSettings from "../../assets/preview-images/smartoi/lightmode/
 import fieldOps from "../../assets/project-images/fieldOps.png";
 import hackflow from "../../assets/project-images/hackflow.png";
 import smartoi from "../../assets/project-images/smartoi.png";
+import eventech from "../../assets/project-images/eventech.png";
 
 export const projectsArray = [
   {
@@ -96,6 +97,18 @@ export const projectsArray = [
     technologies: [
       { category: "Front-end", used: "React native" },
       { category: "Visual ID", used: "Illustrator" },
+    ],
+  },
+  {
+    name: "(E)venTech",
+    description: "Eventech is a web application designed browse club events. It allows users to browse events, filter by category, and access registration links. I developed it using the MERN stack, with features such as user-friendly filters & search functionality.",
+    image: eventech,
+    previewImages: [],
+    github: "https://github.com/amelsadoun/MERN-app",
+    technologies: [
+      { category: "Back-end", used: "Express.js, MongoDB" },
+      { category: "Front-end", used: "React.js" },
+      { category: "UI-UX", used: "Figma" },
     ],
   },
 ];
