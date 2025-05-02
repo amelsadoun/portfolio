@@ -1,23 +1,48 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Popup } from "react-popupify";
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const CustomPopup = ({ info }) => {
-  const [loading, setLoading] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
+  const totalImages = info.previewImages.length;
+
+  const handleImageLoad = () => {
+    setLoadedCount((prev) => prev + 1);
+  };
+
+  const allImagesLoaded = loadedCount === totalImages;
 
   return (
     <Popup
       popupId={info.name}
       animation="bounce"
-      open={false} 
+      open={false}
       closeOnEscape={true}
       closeOnOutsideClick={true}
       closeButton={true}
+      
     >
-      {loading ? (
-        <>loading...</>
-      ) : (
+      {!allImagesLoaded && (
+        <div className="flex justify-center items-center h-[300px]">
+          <span className="text-lg text-white font-semibold m-10">Loading...</span>
+        </div>
+      )}
+
+      {/* Preload images invisibly */}
+      <div className="hidden">
+        {info.previewImages.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt=""
+            onLoad={handleImageLoad}
+            onError={handleImageLoad} // fallback in case of broken image
+          />
+        ))}
+      </div>
+
+      {allImagesLoaded && (
         <Carousel
           className="custom-carousel max-w-[900px]"
           showThumbs={false}
@@ -31,7 +56,7 @@ const CustomPopup = ({ info }) => {
           {info.previewImages.map((image, index) => (
             <div key={index}>
               <img
-                className="max-h-[90vh] max-w-[800px] object-contain "
+                className="max-h-[90vh] max-w-[800px] object-contain"
                 src={image}
                 alt={`Preview ${index + 1}`}
               />

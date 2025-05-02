@@ -33,13 +33,51 @@ import smartoiLightHome from "../../assets/preview-images/smartoi/lightmode/home
 import smartoiLightHome2 from "../../assets/preview-images/smartoi/lightmode/home2.jpg";
 import smartoiLightSettings from "../../assets/preview-images/smartoi/lightmode/settings.jpg";
 
+// BOOkaise Images
+import bookaiseCart from "../../assets/preview-images/bookaise/bookaise-cart.png";
+import bookaiseConfirm from "../../assets/preview-images/bookaise/bookaise-confirm.png";
+import bookaiseDetailsSummary from "../../assets/preview-images/bookaise/bookaise-details-summary.png";
+import bookaiseDetails from "../../assets/preview-images/bookaise/bookaise-details.png";
+import bookaiseLogin from "../../assets/preview-images/bookaise/bookaise-login.png";
+import bookaiseMainDark from "../../assets/preview-images/bookaise/bookaise-main-dark.png";
+import bookaiseMainVoice from "../../assets/preview-images/bookaise/bookaise-main-voice.png";
+import bookaiseMain from "../../assets/preview-images/bookaise/bookaise-main.png";
+import bookaiseOnboarding from "../../assets/preview-images/bookaise/bookaise-onboarding.png";
+import bookaiseSettings from "../../assets/preview-images/bookaise/bookaise-settings.png";
+import bookaiseSignup from "../../assets/preview-images/bookaise/bookaise-signup.png";
+
 //Project cover images
 import fieldOps from "../../assets/project-images/fieldOps.png";
 import hackflow from "../../assets/project-images/hackflow.png";
 import smartoi from "../../assets/project-images/smartoi.png";
 import eventech from "../../assets/project-images/eventech.png";
+import bookaise from "../../assets/project-images/BookAIse.png";
 
 export const projectsArray = [
+  {
+    name: "BookAIse",
+    description:
+      "BookAIse is an AI-powered bookstore app designed to make discovering, recommending, and purchasing books effortless. With natural language search, personalized suggestions, and a seamless buying experience.",
+    image: bookaise,
+    previewImages: [
+      bookaiseCart,
+      bookaiseConfirm,
+      bookaiseDetailsSummary,
+      bookaiseDetails,
+      bookaiseLogin,
+      bookaiseMainDark,
+      bookaiseMainVoice,
+      bookaiseMain,
+      bookaiseOnboarding,
+      bookaiseSettings,
+      bookaiseSignup,
+    ],
+    github: "https://github.com/mounir19000/MobAi",
+    technologies: [
+      { category: "UI-UX (main)", used: "Figma" },
+      { category: "Front-end", used: "Flutter" },
+    ],
+  },
   {
     name: "FieldOps",
     description:
@@ -61,7 +99,8 @@ export const projectsArray = [
   },
   {
     name: "HackFlow",
-    description: "HackFlow is a hackathon management app that supports everything from team building to project submissions. It helps participants stay on track with the event schedule, allows organizers to make announcements, and enables judges to evaluate projects.",
+    description:
+      "HackFlow is a hackathon management app that supports everything from team building to project submissions. It helps participants stay on track with the event schedule, allows organizers to make announcements, and enables judges to evaluate projects.",
     image: hackflow,
     previewImages: [hackflowHome, hackflowTeams],
     github: "https://github.com/imadfen/GDG_Hack_OR-BIT_Team.git",
@@ -72,7 +111,8 @@ export const projectsArray = [
   },
   {
     name: "SmarToI",
-    description: "SmarTOI is a smart switch mobile application that enables users to control their home devices through IoT. I was responsible for the entire mobile app development, as well as the design of the visual identity and logo.",
+    description:
+      "SmarTOI is a smart switch mobile application that enables users to control their home devices through IoT. I was responsible for the entire mobile app development, as well as the design of the visual identity and logo.",
     image: smartoi,
     previewImages: [
       smartoiPreview1,
@@ -101,7 +141,8 @@ export const projectsArray = [
   },
   {
     name: "(E)venTech",
-    description: "Eventech is a web application designed browse club events. It allows users to browse events, filter by category, and access registration links. I developed it using the MERN stack, with features such as user-friendly filters & search functionality.",
+    description:
+      "Eventech is a web application designed browse club events. It allows users to browse events, filter by category, and access registration links. I developed it using the MERN stack, with features such as user-friendly filters & search functionality.",
     image: eventech,
     previewImages: [],
     github: "https://github.com/amelsadoun/MERN-app",
