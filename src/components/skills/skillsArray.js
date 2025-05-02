@@ -5,6 +5,9 @@ import nodejs_icon from "../svg/backend/nodejs.svg";
 import react_icon from "../svg/frontend/react.svg";
 import reactnative_icon from "../svg/frontend/react-native.svg";
 import gsap_icon from "../svg/frontend/gsap.svg";
+import flutter_icon from "../svg/frontend/flutter.svg";
+import angular_icon from "../svg/frontend/angular.svg";
+import next_icon from "../svg/frontend/next.svg";
 import illustrator_icon from "../svg/design/illustrator.svg";
 import figma_icon from "../svg/design/figma.svg";
 
@@ -15,6 +18,9 @@ const skillsArray = {
     { name: "Tailwind", icon: tailwind_icon },
     { name: "Vite", icon: vite_icon },
     { name: "GSAP", icon: gsap_icon },
+    { name: "Flutter", icon: flutter_icon },
+    { name: "Next js", icon: next_icon },
+    { name: "Angular js", icon: angular_icon },
   ],
 
   backend: [

@@ -12,7 +12,7 @@ function App() {
     document.body.style.zoom = "90%";
   }, []);
   return (
-    <div className="flex flex-col align-middle lg:items-center w-fit">
+    <div className="flex flex-col align-middle overflow-hidden lg:items-center w-full]">
       <NavigationCarousel />
       <section id="who am i?">
         <Hero />
@@ -23,9 +23,7 @@ function App() {
       <section id="projects">
         <Projects />
       </section>
-      <section id="contact">
-        <Contact />
-      </section>
+      <Contact />
     </div>
   );
 }

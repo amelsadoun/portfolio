@@ -1,39 +1,41 @@
-import linkedin_icon from "../svg/contact/linkedin.svg";
-import github_icon from "../svg/contact/github.svg";
-import facebook_icon from "../svg/contact/facebook.svg";
-import instagram_icon from "../svg/contact/instagram.svg";
-import behance_icon from "../svg/contact/behance.svg";
-import gmail_icon from "../svg/contact/gmail.svg";
+import { FaLinkedin, FaGithub, FaFacebook, FaInstagram, FaBehance, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const contactLinks = [
   {
+    name: "Location",
+    icon: FaMapMarkerAlt,
+    text: "Algiers, Algeria",
+    link: null,
+  },
+  {
+    name: "Email",
+    icon: FaEnvelope,
+    text: "amelsadoun.b@gmail.com",
+    link: "mailto:amelsadoun.b@gmail.com",
+  },
+  {
     name: "LinkedIn",
-    icon: linkedin_icon,
+    icon: FaLinkedin,
     link: "https://www.linkedin.com/in/sadoun-amel/",
   },
   {
-    name: "amelsadoun.b@gmail.com",
-    icon: gmail_icon,
-    link: "",
-  },
-  {
     name: "Github",
-    icon: github_icon,
+    icon: FaGithub,
     link: "https://github.com/amelsadoun",
   },
   {
     name: "Behance",
-    icon: behance_icon,
+    icon: FaBehance,
     link: "https://www.behance.net/amelsadoun",
   },
   {
     name: "Facebook",
-    icon: facebook_icon,
+    icon: FaFacebook,
     link: "https://www.facebook.com/amel.sadoun.50/",
   },
   {
     name: "Instagram",
-    icon: instagram_icon,
+    icon: FaInstagram,
     link: "https://www.instagram.com/hopingwme/",
   },
 ];

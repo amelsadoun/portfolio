@@ -1,8 +1,21 @@
 export default function ContactElement({ info }) {
+  const IconComponent = info.icon;
+
   return (
-    <a href={info.link} className="flex flex-row gap-5 justify-between align-middle items-center hover:scale-110 ease-in-out duration-150 text-white hover:text-light-pink">
-      <img src={info.icon} className="w-10 h-10" alt="" />
-      <p className="text-xl font-semibold ">{info.name}</p>
-    </a>
+    <div className="flex items-center gap-3">
+      <IconComponent className="text-white w-6 h-6" />
+      {info.link ? (
+        <a
+          href={info.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white text-lg hover:text-light-pink hover:underline"
+        >
+          {info.name}
+        </a>
+      ) : (
+        <span className="text-white">{info.text}</span>
+      )}
+    </div>
   );
 }

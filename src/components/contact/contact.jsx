@@ -3,13 +3,13 @@ import contactLinks from "./contactLinks";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col text-center justify-evenly gap-32 py-32 items-center align-middle">
-      <h1 className="font-bold text-5xl text-light-pink">CONTACT ME</h1>
-      <div className="flex flex-col lg:max-h-[500px] justify-around items-start align-middle flex-wrap gap-32">
+    <section id="contact" className="flex lg:h-72 bg-[#21176E]/70 lg:w-[120vw] py-7 gap-5 flex-col text-center justify-around mt-20 items-center align-middle">
+      <h1 className="font-bold text-2xl text-light-pink">CONTACT</h1>
+      <div className="flex flex-row max-w-[80%] justify-center items-start align-middle flex-wrap gap-x-16 gap-y-8">
         {contactLinks.map((contact) => (
           <ContactElement info={contact} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

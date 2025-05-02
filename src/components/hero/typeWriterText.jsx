@@ -12,13 +12,13 @@ export default function TypeWriterText() {
   };
 
   return (
-    <h1 className="text-6xl lg:text-7xl text-white h-72 w-64 md:w-auto lg:h-auto md:h-44 lg:w-auto">
+    <h1 className="sm:text-6xl text-4xl text-white min-h-44 w-full md:w-auto lg:h-auto md:h-44 lg:w-auto">
       I'M AMEL SADOUN
       <br /> A{" "}
       <span className="text-light-pink font-bold">
         {/* Style will be inherited from the parent element */}
         <Typewriter
-          words={["FRONTEND DEVELOPER", "MOBILE DEVELOPER", "GRAPHIC DESIGNER", "PERSON"]}
+          words={["FRONTEND DEVELOPER", "MOBILE DEVELOPER", "UI/UX DESIGNER" ,"GRAPHIC DESIGNER"]}
           loop={true}
           cursor
           cursorStyle="|"

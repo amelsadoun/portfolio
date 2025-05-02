@@ -15,7 +15,7 @@ export const Details = ({ info }) => {
   };
 
   return (
-    <div className="flex flex-col flex-wrap justify-between align-middle items-center gap-6 w-full">
+    <div className="flex flex-col flex-wrap justify-between align-middle items-center gap-6 w-full px-3 md:px-0">
       <Technologies techs={info.technologies} />
       <div className="flex flex-row justify-around w-full">
         {" "}
@@ -25,7 +25,7 @@ export const Details = ({ info }) => {
             href={info.github}
           >
             <img src={github_icon} className="w-7 h-7 " alt="" />
-            <p>Github repository</p>
+            <p>Github</p>
           </a>
         )}
         {info.previewImages && info.previewImages.length > 0 && (
@@ -34,7 +34,7 @@ export const Details = ({ info }) => {
             onClick={() => showPreviewImages(info.previewImages)}
           >
             <img src={preview_icon} className="w-7 h-7 " alt="" />
-            <p>Preview images</p>
+            <p>Preview</p>
           </div>
         )}
       </div>

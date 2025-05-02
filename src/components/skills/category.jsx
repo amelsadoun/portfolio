@@ -74,7 +74,7 @@ export const Category = ({ skills, name, image }) => {
     >
       <div className="flex gap-12 flex-col justify-center items-center align-middle text-center p-5">
         <img src={image} className="h-52 w-60" alt="" />
-        <h1 className="text-white font-medium text-2xl self-center">{name}</h1>
+        <h1 className="text-white font-medium text-xl self-center">{name}</h1>
       </div>
       <div
         ref={skillsRef}
