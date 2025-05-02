@@ -4,14 +4,17 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const CustomPopup = ({ info }) => {
-  const [loadedCount, setLoadedCount] = useState(0);
-  const totalImages = info.previewImages.length;
+  const [imageLoaded, setImageLoaded] = useState(
+    Array(info.previewImages.length).fill(false)
+  );
 
-  const handleImageLoad = () => {
-    setLoadedCount((prev) => prev + 1);
+  const handleImageLoad = (index) => {
+    setImageLoaded((prev) => {
+      const updated = [...prev];
+      updated[index] = true;
+      return updated;
+    });
   };
-
-  const allImagesLoaded = loadedCount === totalImages;
 
   return (
     <Popup
@@ -21,49 +24,38 @@ const CustomPopup = ({ info }) => {
       closeOnEscape={true}
       closeOnOutsideClick={true}
       closeButton={true}
-      
     >
-      {!allImagesLoaded && (
-        <div className="flex justify-center items-center h-[300px]">
-          <span className="text-lg text-white font-semibold m-10">Loading...</span>
-        </div>
-      )}
-
-      {/* Preload images invisibly */}
-      <div className="hidden">
+      <Carousel
+        className="custom-carousel max-w-[900px]"
+        showThumbs={false}
+        showStatus={false}
+        infiniteLoop={true}
+        useKeyboardArrows={true}
+        autoPlay={true}
+        dynamicHeight={true}
+        showArrows={true}
+      >
         {info.previewImages.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            alt=""
-            onLoad={handleImageLoad}
-            onError={handleImageLoad} // fallback in case of broken image
-          />
+          <div key={index} className="relative">
+            {!imageLoaded[index] && (
+              <div className="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 z-10">
+                <span className="text-lg text-white font-semibold">
+                  Loading...
+                </span>
+              </div>
+            )}
+            <img
+              className={`max-h-[90vh] max-w-[800px] object-contain ${
+                imageLoaded[index] ? "" : "invisible"
+              }`}
+              src={image}
+              alt={`Preview ${index + 1}`}
+              onLoad={() => handleImageLoad(index)}
+              onError={() => handleImageLoad(index)} // fallback in case of error
+            />
+          </div>
         ))}
-      </div>
-
-      {allImagesLoaded && (
-        <Carousel
-          className="custom-carousel max-w-[900px]"
-          showThumbs={false}
-          showStatus={false}
-          infiniteLoop={true}
-          useKeyboardArrows={true}
-          autoPlay={true}
-          dynamicHeight={true}
-          showArrows={true}
-        >
-          {info.previewImages.map((image, index) => (
-            <div key={index}>
-              <img
-                className="max-h-[90vh] max-w-[800px] object-contain"
-                src={image}
-                alt={`Preview ${index + 1}`}
-              />
-            </div>
-          ))}
-        </Carousel>
-      )}
+      </Carousel>
     </Popup>
   );
 };
