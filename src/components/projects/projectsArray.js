@@ -52,8 +52,21 @@ import hackflow from "../../assets/project-images/hackflow.png";
 import smartoi from "../../assets/project-images/smartoi.png";
 import eventech from "../../assets/project-images/eventech.png";
 import bookaise from "../../assets/project-images/BookAIse.png";
+import sanox from "../../assets/project-images/sanox.png";
 
 export const projectsArray = [
+  {
+    name: "SanoX",
+    description:
+      "designed and implemented the entire SanoX landing page and helped integrate the main app, which offers users quick symptom-based evaluations, direct doctor access, and personalized health follow-up through a simple, clear interface.",
+    image: sanox,
+    previewImages: [],
+    liveView: "https://sanox.vercel.app/",
+    technologies: [
+      { category: "UI-UX", used: "Figma" },
+      { category: "Front-end", used: "React.js" },
+    ],
+  },
   {
     name: "BookAIse",
     description:
@@ -97,18 +110,7 @@ export const projectsArray = [
       { category: "Logo", used: "Illustrator" },
     ],
   },
-  {
-    name: "HackFlow",
-    description:
-      "HackFlow is a hackathon management app that supports everything from team building to project submissions. It helps participants stay on track with the event schedule, allows organizers to make announcements, and enables judges to evaluate projects.",
-    image: hackflow,
-    previewImages: [hackflowHome, hackflowTeams],
-    github: "https://github.com/imadfen/GDG_Hack_OR-BIT_Team.git",
-    technologies: [
-      { category: "Front-end", used: "React.js, Tailwind" },
-      { category: "Logo", used: "Illustrator" },
-    ],
-  },
+ 
   {
     name: "SmarToI",
     description:
@@ -150,6 +152,17 @@ export const projectsArray = [
       { category: "Back-end", used: "Express.js, MongoDB" },
       { category: "Front-end", used: "React.js" },
       { category: "UI-UX", used: "Figma" },
+    ],
+  }, {
+    name: "HackFlow",
+    description:
+      "HackFlow is a hackathon management app that supports everything from team building to project submissions. It helps participants stay on track with the event schedule, allows organizers to make announcements, and enables judges to evaluate projects.",
+    image: hackflow,
+    previewImages: [hackflowHome, hackflowTeams],
+    github: "https://github.com/imadfen/GDG_Hack_OR-BIT_Team.git",
+    technologies: [
+      { category: "Front-end", used: "React.js, Tailwind" },
+      { category: "Logo", used: "Illustrator" },
     ],
   },
 ];

@@ -28,7 +28,16 @@ export const Details = ({ info }) => {
             <p>Github</p>
           </a>
         )}
-        {info.previewImages && info.previewImages.length > 0 && (
+        {info.liveView && (
+          <a
+            className="flex flex-row justify-between align-middle items-center gap-3 hover:scale-110 ease-in duration-150 font-semibold hover:underline"
+            href={info.liveView}
+          >
+            <img src="eye-icon.png" className="w-7 h-7 " alt="" />
+            <p>Live view</p>
+          </a>
+        )}
+        {info.previewImages && info.previewImages?.length > 0 && (
           <div
             className="cursor-pointer flex flex-row justify-between align-middle items-center gap-3 hover:scale-110 ease-in duration-150 font-semibold hover:underline"
             onClick={() => showPreviewImages(info.previewImages)}
